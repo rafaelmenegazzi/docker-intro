@@ -1,4 +1,4 @@
-# GO
+# GO Hello-world
 
 Locally develop using Golang
 ```
@@ -9,13 +9,10 @@ docker run --rm -it -v $(pwd)/src:/go/src golang:latest
 To build image
 ```
 cd go
-docker build -t rafaelmenegazzi/hello-go:latest . -f Dockerfile.prod 
+docker build -t rafaelmenegazzi/hello-go:latest . -f Dockerfile
 ```
 
 Image available at:
 ```
 https://hub.docker.com/repository/docker/rafaelmenegazzi/hello-go
 ```
-
-
-
