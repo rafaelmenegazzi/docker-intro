@@ -1,18 +1,28 @@
 # GO Hello-world
 
-Locally develop using Golang
+Running locally
+```bash
+docker run --rm rafaelmenegazzi/hello-go:latest
 ```
+
+Image available at https://hub.docker.com/repository/docker/rafaelmenegazzi/hello-go
+
+Developing locally using Golang
+```bash
 cd go
-docker run --rm -it -v $(pwd)/src:/go/src golang:latest
+docker run --rm -it -v $(pwd)/hello:/go/src/hello golang:latest
+cd src/hello
+go run .
 ```
 
 To build image
-```
+```bash
 cd go
-docker build -t rafaelmenegazzi/hello-go:latest . -f Dockerfile
+docker build -t <tag> .
 ```
 
-Image available at:
-```
-https://hub.docker.com/repository/docker/rafaelmenegazzi/hello-go
+To publish image
+```bash
+cd go
+docker push <tag>
 ```
